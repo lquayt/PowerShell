@@ -33,3 +33,8 @@
    Query-OracleDatabase -Query "Select * from Table" -UserName "UserName" -Password "UsernamePassword" -ServerName "NameOfTheServer"
 
 #>
+Add-Type -Path "C:\Program Files\PackageManagement\NuGet\Packages\Oracle.ManagedDataAccess.12.1.24160719\lib\net40\Oracle.ManagedDataAccess.dll"
+
+
+
+$Connection = New-Object Oracle.ManagedDataAccess.Client.OracleConnection(“User Id=hr;Password=hr;Data Source=localhost/XE”)
